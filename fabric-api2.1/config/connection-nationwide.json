@@ -1,0 +1,50 @@
+{
+    "name": "first-network-orgnationwide",
+    "version": "1.0.0",
+    "client": {
+        "organization": "nationwide",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "nationwide": {
+            "mspid": "nationwideMSP",
+            "peers": [
+                "peer0.nationwide.example.com"          
+            ],
+            "certificateAuthorities": [
+                "ca.nationwide.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.nationwide.example.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICZjCCAg2gAwIBAgIQb0OcfQyYaqGDuDflKtVOUjAKBggqhkjOPQQDAjB+MQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzEdMBsGA1UEChMUY2FsaWJiZXIuZXhhbXBsZS5jb20xIzAhBgNVBAMT\nGnRsc2NhLmNhbGliYmVyLmV4YW1wbGUuY29tMB4XDTIyMDIyNzE4NDQwMFoXDTMy\nMDIyNTE4NDQwMFowfjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEx\nFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHTAbBgNVBAoTFGNhbGliYmVyLmV4YW1w\nbGUuY29tMSMwIQYDVQQDExp0bHNjYS5jYWxpYmJlci5leGFtcGxlLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABFW8/OQp9OqoSD6mAzjGKBMzCj/UNGVnqiCP\nRHY+8YXs1s6I/NFKrGCvMjwxM11mlPxovYxl/CuM/vy49JFjuM6jbTBrMA4GA1Ud\nDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0T\nAQH/BAUwAwEB/zApBgNVHQ4EIgQgk797UTi28UFZIiBp+UmLFy80eiHuO/TupUyo\n85Xby80wCgYIKoZIzj0EAwIDRwAwRAIgFMXxF8sIFVhFKuS91qvaCxX8Yedy4wlo\nYFQprkY0vTACIBnjhFg9N6F/5g825ttMlM1qNUEhf0gfIrg2vmCQE7Y6\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.nationwide.example.com",
+                "hostnameOverride": "peer0.nationwide.example.com"
+            }
+        }
+	
+    },
+    "certificateAuthorities": {
+        "ca.nationwide.example.com": {
+            "url": "https://localhost:7054",
+            "caName": "ca.nationwide.example.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICZjCCAg2gAwIBAgIQb0OcfQyYaqGDuDflKtVOUjAKBggqhkjOPQQDAjB+MQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzEdMBsGA1UEChMUY2FsaWJiZXIuZXhhbXBsZS5jb20xIzAhBgNVBAMT\nGnRsc2NhLmNhbGliYmVyLmV4YW1wbGUuY29tMB4XDTIyMDIyNzE4NDQwMFoXDTMy\nMDIyNTE4NDQwMFowfjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEx\nFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHTAbBgNVBAoTFGNhbGliYmVyLmV4YW1w\nbGUuY29tMSMwIQYDVQQDExp0bHNjYS5jYWxpYmJlci5leGFtcGxlLmNvbTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABFW8/OQp9OqoSD6mAzjGKBMzCj/UNGVnqiCP\nRHY+8YXs1s6I/NFKrGCvMjwxM11mlPxovYxl/CuM/vy49JFjuM6jbTBrMA4GA1Ud\nDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0T\nAQH/BAUwAwEB/zApBgNVHQ4EIgQgk797UTi28UFZIiBp+UmLFy80eiHuO/TupUyo\n85Xby80wCgYIKoZIzj0EAwIDRwAwRAIgFMXxF8sIFVhFKuS91qvaCxX8Yedy4wlo\nYFQprkY0vTACIBnjhFg9N6F/5g825ttMlM1qNUEhf0gfIrg2vmCQE7Y6\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

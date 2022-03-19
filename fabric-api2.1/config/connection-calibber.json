@@ -1,0 +1,50 @@
+{
+    "name": "first-network-orgcalibber",
+    "version": "1.0.0",
+    "client": {
+        "organization": "calibber",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "calibber": {
+            "mspid": "calibberMSP",
+            "peers": [
+                "peer0.calibber.example.com"          
+            ],
+            "certificateAuthorities": [
+                "ca.calibber.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.calibber.example.com": {
+            "url": "grpcs://localhost:9051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICcTCCAhegAwIBAgIQF9cqtAfzLQufif655uMPMjAKBggqhkjOPQQDAjCBgjEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xHzAdBgNVBAoTFm5hdGlvbndpZGUuZXhhbXBsZS5jb20xJTAjBgNV\nBAMTHHRsc2NhLm5hdGlvbndpZGUuZXhhbXBsZS5jb20wHhcNMjIwMjI3MTg0NDAw\nWhcNMzIwMjI1MTg0NDAwWjCBgjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlm\nb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHzAdBgNVBAoTFm5hdGlvbndp\nZGUuZXhhbXBsZS5jb20xJTAjBgNVBAMTHHRsc2NhLm5hdGlvbndpZGUuZXhhbXBs\nZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARQ6eqfwgp8lSjmg9XsHGnI\niBcBVkExWJgvgFwm5dZFth6jV1zRRSEB9CArZmw44W3rhnwWll9NywwSze1T0m8R\no20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIH4tJdwGnHUTd7K6UFB6buXG\nAX2LDZs/Psqs7HU3NKaVMAoGCCqGSM49BAMCA0gAMEUCIQD/ilQIlpCxWCBYQQx6\nnR3HiacCJtsfZ8b+NlWgPErepwIgdnGVGtvI0CY98qrWhAmTgYiUt/N9WSygTdey\nhTLGY2Q=\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.calibber.example.com",
+                "hostnameOverride": "peer0.calibber.example.com"
+            }
+        }
+	
+    },
+    "certificateAuthorities": {
+        "ca.calibber.example.com": {
+            "url": "https://localhost:8054",
+            "caName": "ca.calibber.example.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICcTCCAhegAwIBAgIQF9cqtAfzLQufif655uMPMjAKBggqhkjOPQQDAjCBgjEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xHzAdBgNVBAoTFm5hdGlvbndpZGUuZXhhbXBsZS5jb20xJTAjBgNV\nBAMTHHRsc2NhLm5hdGlvbndpZGUuZXhhbXBsZS5jb20wHhcNMjIwMjI3MTg0NDAw\nWhcNMzIwMjI1MTg0NDAwWjCBgjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlm\nb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHzAdBgNVBAoTFm5hdGlvbndp\nZGUuZXhhbXBsZS5jb20xJTAjBgNVBAMTHHRsc2NhLm5hdGlvbndpZGUuZXhhbXBs\nZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARQ6eqfwgp8lSjmg9XsHGnI\niBcBVkExWJgvgFwm5dZFth6jV1zRRSEB9CArZmw44W3rhnwWll9NywwSze1T0m8R\no20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIH4tJdwGnHUTd7K6UFB6buXG\nAX2LDZs/Psqs7HU3NKaVMAoGCCqGSM49BAMCA0gAMEUCIQD/ilQIlpCxWCBYQQx6\nnR3HiacCJtsfZ8b+NlWgPErepwIgdnGVGtvI0CY98qrWhAmTgYiUt/N9WSygTdey\nhTLGY2Q=\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
